@@ -51,6 +51,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\MainMenu.cs" />
      <Compile Include="Assets\Scripts\Apple.cs" />
      <Compile Include="Assets\Scripts\ApplePicker.cs" />
      <Compile Include="Assets\Scripts\AppleTree.cs" />
