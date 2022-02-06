@@ -67,11 +67,6 @@ public class AppleTree : MonoBehaviour
          * e) Flips the sign of speed (direction)
          */
     }
-    /* Time Based Movement Notes
-     * pos.x += speed* Time.deltaTime;
-     * pos.x += 1.0f * 0.01f;
-     * pos.x += 0.01f;
-     */
 
     void FixedUpdate()
     {
