@@ -192,6 +192,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 509204535}
+  - component: {fileID: 509204536}
   m_Layer: 0
   m_Name: LaunchPoint
   m_TagString: Untagged
@@ -212,6 +213,17 @@ Transform:
   m_Father: {fileID: 1042936735}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 15, z: 0}
+--- !u!122 &509204536
+Halo:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 509204534}
+  m_Enabled: 1
+  m_Color:
+    serializedVersion: 2
+    rgba: 4290756543
+  m_Size: 3
 --- !u!1 &958414836
 GameObject:
   m_ObjectHideFlags: 0
@@ -290,8 +302,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 958414836}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -10, z: 0}
-  m_LocalScale: {x: 100, y: 1, z: 4}
+  m_LocalPosition: {x: 100, y: -10, z: 0}
+  m_LocalScale: {x: 400, y: 1, z: 4}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 2
@@ -353,6 +365,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c8a9cc0f661bc9c4db98cbd0313cff04, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  prefabProjectile: {fileID: 1223452129215456, guid: c69b558f71e0b494dbf737b205223437,
+    type: 2}
+  velocityMult: 8
+  launchPoint: {fileID: 0}
+  launchPos: {x: 0, y: 0, z: 0}
+  projectile: {fileID: 0}
+  aimingMode: 0
 --- !u!1 &1427091423
 GameObject:
   m_ObjectHideFlags: 0
@@ -571,6 +590,7 @@ GameObject:
   - component: {fileID: 1974334023}
   - component: {fileID: 1974334022}
   - component: {fileID: 1974334021}
+  - component: {fileID: 1974334025}
   m_Layer: 0
   m_Name: _MainCamera
   m_TagString: MainCamera
@@ -641,3 +661,15 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1974334025
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1974334020}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d8f558a14202ece4ab717a5f55b9815b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  camZ: 0
