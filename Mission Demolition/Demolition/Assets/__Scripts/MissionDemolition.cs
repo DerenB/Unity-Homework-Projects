@@ -13,9 +13,15 @@ public enum GameMode
 public class MissionDemolition : MonoBehaviour 
 {
     static private MissionDemolition S; // a private Singleton
+    public int highscore0 = 10;
+    public int highscore1 = 10;
+    public int highscore2 = 10;
+    public int highscore3 = 10;
+    public int highscore4 = 10;
 
     [Header("Set in Inspector")]
     public Text uitLevel;  // The UIText_Level Text
+    public Text uiHighScore;    // The UIHigh_Score Text
     public Text uitShots;  // The UIText_Shots Text
     public Text uitButton; // The Text on UIButton_View
     public Vector3 castlePos; // The place to put castles
@@ -72,6 +78,7 @@ public class MissionDemolition : MonoBehaviour
         // Show the data in the GUITexts
         uitLevel.text = "Level: " + (level + 1) + " of " + levelMax;
         uitShots.text = "Shots Taken: " + shotsTaken;
+        uiHighScore.text = "High Score: " + GetHighScore(level);
     }
 
     void Update()
@@ -93,6 +100,8 @@ public class MissionDemolition : MonoBehaviour
 
     void NextLevel()
     {
+        SetHighScore(shotsTaken, level);
+
         level++;
         if (level == levelMax)
         {
@@ -127,10 +136,63 @@ public class MissionDemolition : MonoBehaviour
         }
     }
 
+    // Closes the Prorgam
+    public void Quit()
+    {
+        Application.Quit();
+    }
+
     // Static method that allows code anywhere to increment shotsTaken
     public static void ShotFired()
     {
         S.shotsTaken++;
     }
 
+
+    //Method for setting High Scores
+    void SetHighScore(int newScore, int currentLevel)
+    {
+        switch(currentLevel)
+        {
+            case 0:
+                highscore0 = NewScoreCheck(highscore0, newScore);
+                break;
+            case 1:
+                highscore1 = NewScoreCheck(highscore1, newScore);
+                break;
+            case 2:
+                highscore2 = NewScoreCheck(highscore2, newScore);
+                break;
+            case 3:
+                highscore3 = NewScoreCheck(highscore3, newScore);
+                break;
+            case 4:
+                highscore4 = NewScoreCheck(highscore4, newScore);
+                break;
+        }
+    }
+
+    int NewScoreCheck(int highScore, int newScore)
+    {
+        return (newScore <= highScore) ? newScore : highScore;
+    }
+
+    int GetHighScore(int currentLevel)
+    {
+        switch (currentLevel)
+        {
+            case 0:
+                return highscore0;
+            case 1:
+                return highscore1;
+            case 2:
+                return highscore2;
+            case 3:
+                return highscore3;
+            case 4:
+                return highscore4;
+            default:
+                return 10;
+        }
+    }
 }
