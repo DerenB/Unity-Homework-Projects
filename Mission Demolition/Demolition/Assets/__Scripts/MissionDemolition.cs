@@ -73,6 +73,8 @@ public class MissionDemolition : MonoBehaviour
         mode = GameMode.playing;
     }
 
+  
+
     void UpdateGUI()
     {
         // Show the data in the GUITexts
@@ -134,12 +136,6 @@ public class MissionDemolition : MonoBehaviour
                 uitButton.text = "Show Slingshot";
                 break;
         }
-    }
-
-    // Closes the Prorgam
-    public void Quit()
-    {
-        Application.Quit();
     }
 
     // Static method that allows code anywhere to increment shotsTaken
