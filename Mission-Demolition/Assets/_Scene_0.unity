@@ -230,7 +230,7 @@ LineRenderer:
   m_LightProbeUsage: 0
   m_ReflectionProbeUsage: 0
   m_Materials:
-  - {fileID: 2100000, guid: a9dbbae3c385ee94aa442c796ee564ca, type: 2}
+  - {fileID: 2100000, guid: 7f2927a3912a3f043abb895f1d080030, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -255,7 +255,7 @@ LineRenderer:
   - {x: 0, y: 0, z: 1}
   m_Parameters:
     serializedVersion: 2
-    widthMultiplier: 1
+    widthMultiplier: 0.25
     widthCurve:
       serializedVersion: 2
       m_Curve:
@@ -312,7 +312,7 @@ Transform:
   m_GameObject: {fileID: 240057465}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 5
@@ -1699,7 +1699,7 @@ MonoBehaviour:
   uiHighScore: {fileID: 550560093}
   uitShots: {fileID: 93817751}
   uitButton: {fileID: 1790319849}
-  castlePos: {x: 50, y: -9.5, z: 0}
+  castlePos: {x: 30, y: -9.5, z: 0}
   castles:
   - {fileID: 1198561972510828, guid: c12f75b4552a15a4aa7fc812b36a636b, type: 2}
   - {fileID: 1198561972510828, guid: f4c87fc7d272961489e4cdf2afc79d15, type: 2}
