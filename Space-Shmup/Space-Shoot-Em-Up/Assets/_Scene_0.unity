@@ -124,6 +124,7 @@ GameObject:
   - component: {fileID: 271231406}
   - component: {fileID: 271231405}
   - component: {fileID: 271231404}
+  - component: {fileID: 271231407}
   m_Layer: 0
   m_Name: Shield
   m_TagString: Untagged
@@ -197,6 +198,19 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 271231402}
   m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &271231407
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 271231402}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c8ec058763f69448a6669a3e0a70b39, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotationsPerSecond: 0.1
+  levelShown: 0
 --- !u!1 &572410359
 GameObject:
   m_ObjectHideFlags: 0
@@ -356,6 +370,7 @@ GameObject:
   - component: {fileID: 1175856254}
   - component: {fileID: 1175856253}
   - component: {fileID: 1175856252}
+  - component: {fileID: 1175856255}
   m_Layer: 0
   m_Name: _Hero
   m_TagString: Untagged
@@ -409,6 +424,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1175856255
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1175856251}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1bc0a9d037baf5840b4900ce250317f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  radius: 4
+  camWidth: 0
+  camHeight: 0
 --- !u!1 &1237478198
 GameObject:
   m_ObjectHideFlags: 0
