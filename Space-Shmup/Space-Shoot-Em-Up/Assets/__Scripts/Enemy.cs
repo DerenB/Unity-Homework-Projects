@@ -11,6 +11,7 @@ public class Enemy : MonoBehaviour
     public int score = 100;      // Points earned for destroying this
 
     private BoundsCheck bndCheck;
+
     void Awake()
     {
         bndCheck = GetComponent<BoundsCheck>();
@@ -50,7 +51,8 @@ public class Enemy : MonoBehaviour
     {
         GameObject otherGO = coll.gameObject;
         if (otherGO.tag == "ProjectileHero")
-        {                               // b
+        {
+            SoundManagerScript.PlaySound("explode");
             Destroy(otherGO);        // Destroy the Projectile
             Destroy(gameObject);     // Destroy this Enemy GameObject
         }

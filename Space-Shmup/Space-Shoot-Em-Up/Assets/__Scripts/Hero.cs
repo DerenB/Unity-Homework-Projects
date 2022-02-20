@@ -54,6 +54,7 @@ public class Hero : MonoBehaviour
         // Allow the ship to fire
         if (Input.GetKeyDown(KeyCode.Space))
         {
+            SoundManagerScript.PlaySound("lazer");
             TempFire();
         }
     }
@@ -81,6 +82,16 @@ public class Hero : MonoBehaviour
 
         if (go.tag == "Enemy")
         {  // If the shield was triggered by an enemy
+
+            if(shieldLevel == 1)
+            {
+                SoundManagerScript.PlaySound("shields");
+            } 
+            else
+            {
+                SoundManagerScript.PlaySound("blow");
+            }
+
             shieldLevel--;        // Decrease the level of the shield by 1
             Destroy(go);          // … and Destroy the enemy
         }
@@ -103,6 +114,7 @@ public class Hero : MonoBehaviour
             if (value < 0)
             {
                 Destroy(this.gameObject);
+                SoundManagerScript.PlaySound("explode");
 
                 // Tell Main.S to restart the game after a delay
                 Main.S.DelayedRestart(gameRestartDelay);
