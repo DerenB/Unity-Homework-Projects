@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class SoundManagerScript : MonoBehaviour {
 
-	public static AudioClip explosion, lazerShot, shields, blow, online;
+	public static AudioClip explosion, lazerShot, shields, blow;
 	static AudioSource audioSrc;
 
 	// Use this for initialization
@@ -14,7 +14,6 @@ public class SoundManagerScript : MonoBehaviour {
 		lazerShot = Resources.Load<AudioClip>("Lazer");
 		shields = Resources.Load<AudioClip>("ShieldsDown");
 		blow = Resources.Load<AudioClip>("blow");
-		online = Resources.Load<AudioClip>("online");
 
 		audioSrc = GetComponent<AudioSource>();
 	}
@@ -40,9 +39,14 @@ public class SoundManagerScript : MonoBehaviour {
 			case "blow":
 				audioSrc.PlayOneShot(blow);
 				break;
-			case "online":
-				audioSrc.PlayOneShot(online);
-				break;
         }
     }
 }
+
+
+/*
+ * YouTube Tutorial Source: https://youtu.be/8pFlnyfRfRc
+ * Audio Files Source: https://opengameart.org/content/deep-system-computer-voice
+ * Used to Convert File Types: https://cloudconvert.com/flac-to-wav
+ * 
+ */
