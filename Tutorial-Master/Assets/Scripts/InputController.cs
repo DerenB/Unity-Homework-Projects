@@ -22,29 +22,34 @@ public class InputController : MonoBehaviour
         charController.TurnInput = horizontal;
         charController.JumpInput = jump;
     }
-
-    /*
-    public override void Heuristic(in ActionBuffers actionsOut)
-    {
-        int vertical = Mathf.RoundToInt(Input.GetAxisRaw("Vertical"));
-        int horizontal = Mathf.RoundToInt(Input.GetAxisRaw("Horizontal"));
-        bool jump = Input.GetKey(KeyCode.Space);
-
-        ActionSegment<int> actions = actionsOut.DiscreteActions;
-        actions[0] = vertical >= 0 ? vertical : 2;
-        actions[1] = horizontal >= 0 ? horizontal : 2;
-        actions[2] = jump ? 1 : 0;
-    }
-
-    public override void OnActionReceived(ActionBuffers actions)
-    {
-        float vertical = actions.DiscreteActions[0] <= 1 ? actions.DiscreteActions[0] : -1;
-        float horizontal = actions.DiscreteActions[1] <= 1 ? actions.DiscreteActions[1] : -1;
-        bool jump = actions.DiscreteActions[2] > 0;
-
-        charController.ForwardInput = vertical;
-        charController.TurnInput = horizontal;
-        charController.JumpInput = jump;
-    }
-    */
 }
+
+/*
+ * Article Page:
+ * https://www.immersivelimit.com/tutorials/simple-character-controller-for-unity
+ */
+
+/* 
+MIT License
+
+Copyright (c) 2021 Immersive Limit LLC
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+*/
