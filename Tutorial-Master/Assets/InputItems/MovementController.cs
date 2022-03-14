@@ -132,3 +132,12 @@ public class MovementController : MonoBehaviour
         playerInput.CharacterControls.Disable();
     }
 }
+
+/*
+ * SOURCE LOCATIONS
+ * https://youtu.be/UUJMGQTT5ts
+ * https://youtu.be/bXNFxQpp2qk
+ * 
+ * Model ?
+ * https://assetstore.unity.com/packages/3d/characters/jammo-character-mix-and-jam-158456
+ */
