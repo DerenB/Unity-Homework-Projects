@@ -15,7 +15,7 @@ public class MovementController : MonoBehaviour
     Vector3 currentRunMovement;
     bool isMovementPressed;
     bool isRunPressed;
-    float rotationFactorPerFrame = 15.0f;
+    float rotationFactorPerFrame = 45.0f;
     float runMultiplier = 15.0f;
 
     // Runs early, before start function
