@@ -1,2 +1,2 @@
 # Unity-Projects
-Various projects in Unity
+Various homework projects in Unity for EMU Game Dev class
